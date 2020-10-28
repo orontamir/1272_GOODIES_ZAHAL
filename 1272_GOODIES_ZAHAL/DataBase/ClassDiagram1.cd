@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_1272_GOODIES_ZAHAL.DataBase.DbCmd">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="m_tblName" Hidden="true" />
+      <Property Name="TblName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAMAAQAAAAABBAAACEQAAgBAAAEAQAAAAACAAAAAAA=</HashCode>
+      <FileName>DataBase\DbCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1272_GOODIES_ZAHAL.DataBase.SelectCmd">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="m_keyVal" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="_1272_GOODIES_ZAHAL.DataBase.DbCmd" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.92" />
+        <Point X="2.625" Y="1.92" />
+        <Point X="2.625" Y="2.312" />
+        <Point X="3" Y="2.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAACBAAAAABAAAAAAAAAAAAEAAAAAAACAABAAAA=</HashCode>
+      <FileName>DataBase\SelectCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1272_GOODIES_ZAHAL.DataBase.UpdateCmd">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <Members>
+      <Field Name="m_updatedVal" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAQAAAAAAAEAAAAAAEABAAAAACgAQAAGA=</HashCode>
+      <FileName>DataBase\UpdateCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1272_GOODIES_ZAHAL.DataBase.DBParser">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="log" Hidden="true" />
+      <Field Name="m_connectionString" Hidden="true" />
+      <Field Name="m_ins" Hidden="true" />
+      <Field Name="m_selsctCmd" Hidden="true" />
+      <Field Name="m_updateCmd" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAIAQAAAAAABBAAAAEQiBAgAAECAQAAYQIAAAAAAAA=</HashCode>
+      <FileName>DataBase\DBParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1272_GOODIES_ZAHAL.DataModel.ExecuteTransaction">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAgAAAIAgAAAAAABCAVAAQEAoAAAAAIACAAAgAA=</HashCode>
+      <FileName>DataModel\ExecuteTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1272_GOODIES_ZAHAL.Email.SendMail">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="log" Hidden="true" />
+      <Field Name="m_ins" Hidden="true" />
+      <Field Name="mailSent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAACAAgAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>Email\SendMail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1272_GOODIES_ZAHAL.RestFull.RestApi">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAACACAAAAAAAAIQAgAACAAAQA=</HashCode>
+      <FileName>RestFull\RestApi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
