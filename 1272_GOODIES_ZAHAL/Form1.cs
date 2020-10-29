@@ -1,6 +1,7 @@
-﻿using _1272_GOODIES_ZAHAL.DataModel;
+﻿
 using _1272_GOODIES_ZAHAL.Email;
-using _1272_GOODIES_ZAHAL.RestFull;
+using GoodiModels_1272.DataModel;
+using GoodiModels_1272.RestFull;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,13 +46,13 @@ namespace _1272_GOODIES_ZAHAL
                 try
                 {
                     AppendText("Start transaction Goodi system");
-                    Token token = DataBase.DBParser.Instance().GetToken();
+                    Token token = GoodiModels_1272.DataBase.DBParser.Instance().GetToken();
                     if (token == null || token.Stemp_Tar < DateTime.Now || !RestApi.Instance().IsTokenValid(token.TokenNumber))
                     {
                         token = RestApi.Instance().GetNewToken();
                         if (token !=null)
                         {
-                            bool res = DataBase.DBParser.Instance().UpdateToken(token);
+                            bool res = GoodiModels_1272.DataBase.DBParser.Instance().UpdateToken(token);
                         }
                         else
                         {
@@ -60,7 +61,7 @@ namespace _1272_GOODIES_ZAHAL
                         }
                     }
                    
-                    IEnumerable<ExecuteTransaction> transactions = DataBase.DBParser.Instance().GetAllTransactions();
+                    IEnumerable<ExecuteTransaction> transactions = GoodiModels_1272.DataBase.DBParser.Instance().GetAllTransactions();
                     List<ExecuteTransaction> updateOk = new List<ExecuteTransaction>();
                     List<ExecuteTransaction> errorUpdate = new List<ExecuteTransaction>();
                     foreach (ExecuteTransaction transaction in transactions)
@@ -72,25 +73,25 @@ namespace _1272_GOODIES_ZAHAL
                         bool result = RestApi.Instance().ExecuteTransaction(transaction, token.TokenNumber,out errorMessage, out errorCode, out executeTransactionResponse);
                         if (!result)
                         {
-                            transaction.ERROR_MESSAGE = $"Station order  {transaction.STATION_ORDER} did not succeeded update in Goodi system";
+                            transaction.ErrorMessage = $"Station order  {transaction.Station_order} did not succeeded update in Goodi system";
                             AppendText(errorMessage);
-                            isUpdate = DataBase.DBParser.Instance().UpdateTransaction(transaction.ID, errorMessage,errorCode);
+                            isUpdate = GoodiModels_1272.DataBase.DBParser.Instance().UpdateTransaction(transaction.Id, errorMessage,errorCode);
                             errorUpdate.Add(transaction);
                         }
                         else
                         {
-                            AppendText($"Successfully update Station order {transaction.STATION_ORDER}  in goodi system");
-                            isUpdate = DataBase.DBParser.Instance().UpdateTransaction(transaction.ID, transactionResponse: executeTransactionResponse);
+                            AppendText($"Successfully update Station order {transaction.Station_order}  in goodi system");
+                            isUpdate = GoodiModels_1272.DataBase.DBParser.Instance().UpdateTransaction(transaction.Id, transactionResponse: executeTransactionResponse);
                             updateOk.Add(transaction);
                         }
                         if (isUpdate)
                         {
-                            AppendText($"Successfully update Station order status {transaction.STATION_ORDER}  in data base"); 
+                            AppendText($"Successfully update Station order status {transaction.Station_order}  in data base"); 
                         }
                         else
                         {
-                            transaction.ERROR_MESSAGE = $"Station order {transaction.STATION_ORDER} did not succeeded update order status in Data base";
-                            AppendText(transaction.ERROR_MESSAGE);
+                            transaction.ErrorMessage = $"Station order {transaction.Station_order} did not succeeded update order status in Data base";
+                            AppendText(transaction.ErrorMessage);
                         }
                     }
                     if (updateOk.Count > 0 || errorUpdate.Count > 0)

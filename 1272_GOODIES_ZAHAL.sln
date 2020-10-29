@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.1259
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1272_GOODIES_ZAHAL", "1272_GOODIES_ZAHAL\1272_GOODIES_ZAHAL.csproj", "{4164721C-5D8F-41AD-B901-FFA0BA9B3608}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1272_GoodiWebService", "1272_GoodiWebService\1272_GoodiWebService.csproj", "{F2EF515B-A58D-45BF-833E-E271DB897A1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodiModels_1272", "GoodiModels_1272\GoodiModels_1272.csproj", "{A8C4FAD0-6BAA-4518-9B9A-93E34FDB8220}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4164721C-5D8F-41AD-B901-FFA0BA9B3608}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4164721C-5D8F-41AD-B901-FFA0BA9B3608}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4164721C-5D8F-41AD-B901-FFA0BA9B3608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2EF515B-A58D-45BF-833E-E271DB897A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2EF515B-A58D-45BF-833E-E271DB897A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2EF515B-A58D-45BF-833E-E271DB897A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2EF515B-A58D-45BF-833E-E271DB897A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C4FAD0-6BAA-4518-9B9A-93E34FDB8220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C4FAD0-6BAA-4518-9B9A-93E34FDB8220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C4FAD0-6BAA-4518-9B9A-93E34FDB8220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C4FAD0-6BAA-4518-9B9A-93E34FDB8220}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
