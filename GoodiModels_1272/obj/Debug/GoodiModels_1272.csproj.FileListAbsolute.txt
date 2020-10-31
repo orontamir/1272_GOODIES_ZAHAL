@@ -18,3 +18,4 @@ D:\Git\1272_GOODIES_ZAHAL\Git\1272_GOODIES_ZAHAL\GoodiModels_1272\obj\Debug\Good
 D:\Git\1272_GOODIES_ZAHAL\Git\1272_GOODIES_ZAHAL\GoodiModels_1272\obj\Debug\GoodiModels_1272.csproj.CopyComplete
 D:\Git\1272_GOODIES_ZAHAL\Git\1272_GOODIES_ZAHAL\GoodiModels_1272\obj\Debug\GoodiModels_1272.dll
 D:\Git\1272_GOODIES_ZAHAL\Git\1272_GOODIES_ZAHAL\GoodiModels_1272\obj\Debug\GoodiModels_1272.pdb
+D:\Git\1272_GOODIES_ZAHAL\Git\1272_GOODIES_ZAHAL\GoodiModels_1272\obj\Debug\GoodiModels_1272.csprojAssemblyReference.cache

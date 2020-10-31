@@ -14,14 +14,22 @@ namespace _1272_GoodiWebService.Controllers
     public class ExecuteTransactionController : ApiController
     {
         // GET: api/ExecuteTransaction
+        /// <summary>
+        /// GET: api/ExecuteTransaction
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-    
-
         // POST: api/ExecuteTransaction
+        /// <summary>
+        ///  POST: api/ExecuteTransaction
+        ///  Send Execute Transaction to goodi system
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public HttpResponseMessage Post([FromBody]ExecuteTransaction value)
         {
             ExecuteTransactionResponse executeTransactionResponse = new ExecuteTransactionResponse();

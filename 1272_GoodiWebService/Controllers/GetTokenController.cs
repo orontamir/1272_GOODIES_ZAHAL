@@ -14,6 +14,11 @@ namespace _1272_GoodiWebService.Controllers
     public class GetTokenController : ApiController
     {
         // GET: api/GetToken
+        /// <summary>
+        /// GET: api/GetToken
+        /// Get Token from Goodi system
+        /// </summary>
+        /// <returns></returns>
         public string Get()
         {
             try
@@ -40,6 +45,10 @@ namespace _1272_GoodiWebService.Controllers
 
 
         // POST: api/GetToken
+        /// <summary>
+        /// POST: api/GetToken
+        /// </summary>
+        /// <param name="value"></param>
         public void Post([FromBody]Token value)
         {
         }
