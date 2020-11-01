@@ -14,13 +14,14 @@ namespace GoodiModels_1272.RestFull
     public class RestApi
     {
         private readonly ILog log = LogManager.GetLogger(typeof(RestApi));
-
-
+        private string _username = null;
+        private string _password = null;
         private static RestApi m_instance;
 
         private RestApi()
         {
-
+            _username = ConfigurationManager.AppSettings["userName"];
+            _password = ConfigurationManager.AppSettings["password"];
 
         }
 
@@ -75,6 +76,8 @@ namespace GoodiModels_1272.RestFull
                 request.ContentType = "text/xml;charset=\"utf-8\"";
                 request.Accept = "text/xml";
                 request.Method = "POST";
+                request.Credentials = new NetworkCredential(_username, _password);
+                request.Proxy.Credentials = new NetworkCredential(_username, _password);
 
                 XmlDocument soapEnvelopeXml = new XmlDocument();
                 log.Debug($"XML body sending to goodi system: {xml} ");
@@ -145,6 +148,7 @@ namespace GoodiModels_1272.RestFull
                       <Tidluk_time>{transaction.Tidluk_time}</Tidluk_time>
                       <Kod_tazkik>{transaction.Kod_tazkik}</Kod_tazkik>
                       <Station_order>{transaction.Station_order}</Station_order>
+                      <Car_kilometers>{transaction.Car_kilometers}</Car_kilometers>
                     </ExecuteTransaction>
                   </soap:Body>
                 </soap:Envelope>";

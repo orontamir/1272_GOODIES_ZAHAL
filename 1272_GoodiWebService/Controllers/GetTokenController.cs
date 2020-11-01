@@ -44,14 +44,14 @@ namespace _1272_GoodiWebService.Controllers
         }
 
 
-        // POST: api/GetToken
-        /// <summary>
-        /// POST: api/GetToken
-        /// </summary>
-        /// <param name="value"></param>
-        public void Post([FromBody]Token value)
-        {
-        }
+        //// POST: api/GetToken
+        ///// <summary>
+        ///// POST: api/GetToken
+        ///// </summary>
+        ///// <param name="value"></param>
+        //public void Post([FromBody]Token value)
+        //{
+        //}
 
       
     }

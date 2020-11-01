@@ -41,11 +41,12 @@ namespace _1272_GOODIES_ZAHAL
         [Obsolete("Message")]
         private void Run()
         {
+            AppendText("Start Running");
             while (true)
             {
                 try
                 {
-                    AppendText("Start transaction Goodi system");
+                   
                     Token token = GoodiModels_1272.DataBase.DBParser.Instance().GetToken();
                     if (token == null || token.Stemp_Tar < DateTime.Now || !RestApi.Instance().IsTokenValid(token.TokenNumber))
                     {
@@ -66,6 +67,7 @@ namespace _1272_GOODIES_ZAHAL
                     List<ExecuteTransaction> errorUpdate = new List<ExecuteTransaction>();
                     foreach (ExecuteTransaction transaction in transactions)
                     {
+                        AppendText("Start transaction Goodi system");
                         string errorMessage = "";
                         string errorCode = "";
                         bool isUpdate = false;
@@ -93,6 +95,7 @@ namespace _1272_GOODIES_ZAHAL
                             transaction.ErrorMessage = $"Station order {transaction.Station_order} did not succeeded update order status in Data base";
                             AppendText(transaction.ErrorMessage);
                         }
+                        AppendText("Finish Transaction to Goodi system");
                     }
                     if (updateOk.Count > 0 || errorUpdate.Count > 0)
                     {
@@ -111,7 +114,7 @@ namespace _1272_GOODIES_ZAHAL
                         }
                         SendMail.Instance().Email(body, title);
                     }
-                    AppendText("Finish Transaction to Goodi system");
+                    
                 }
                 catch (Exception ex)
                 {

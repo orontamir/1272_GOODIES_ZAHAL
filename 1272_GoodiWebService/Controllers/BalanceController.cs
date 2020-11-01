@@ -13,15 +13,15 @@ namespace _1272_GoodiWebService.Controllers
 {
     public class BalanceController : ApiController
     {
-        // GET: api/Balance
-        /// <summary>
-        ///  GET: api/Balance
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        //// GET: api/Balance
+        ///// <summary>
+        /////  GET: api/Balance
+        ///// </summary>
+        ///// <returns></returns>
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
 
         // POST: api/Balance

@@ -19,6 +19,8 @@ namespace GoodiModels_1272.DataModel
         public int Kod_tazkik { get; set; }
         public string Station_order { get; set; }
 
+        [System.ComponentModel.DefaultValue(0)]
+        public int Car_kilometers { get; set; }
 
 
 

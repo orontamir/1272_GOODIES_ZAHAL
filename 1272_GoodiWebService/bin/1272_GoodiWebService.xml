@@ -4,12 +4,6 @@
         <name>1272_GoodiWebService</name>
     </assembly>
     <members>
-        <member name="M:_1272_GoodiWebService.Controllers.BalanceController.Get">
-            <summary>
-             GET: api/Balance
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:_1272_GoodiWebService.Controllers.BalanceController.Post(GoodiModels_1272.DataModel.Balance)">
             <summary>
             POST: api/Balance
@@ -17,13 +11,8 @@
             Its mandatory to fill Token field
             </summary>
             <param name="value">Json with all data Balance need</param>
-            <returns></returns>
-        </member>
-        <member name="M:_1272_GoodiWebService.Controllers.ExecuteTransactionController.Get">
-            <summary>
-            GET: api/ExecuteTransaction
-            </summary>
-            <returns></returns>
+            <returns>OK if succeeded</returns>
+            <returns>Error code and error message if failed</returns>
         </member>
         <member name="M:_1272_GoodiWebService.Controllers.ExecuteTransactionController.Post(GoodiModels_1272.DataModel.ExecuteTransaction)">
             <summary>
@@ -39,12 +28,6 @@
             Get Token from Goodi system
             </summary>
             <returns></returns>
-        </member>
-        <member name="M:_1272_GoodiWebService.Controllers.GetTokenController.Post(GoodiModels_1272.DataModel.Token)">
-            <summary>
-            POST: api/GetToken
-            </summary>
-            <param name="value"></param>
         </member>
     </members>
 </doc>
